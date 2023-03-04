@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(243, 243, 243);
+}
+header {
+  @include flex(flex, space-between, center);
+  height: 10vh;
+  padding: 3rem 2rem;
+  img {
+    width: 4rem;
+  }
+  form {
+    input {
+      border: none;
+      text-align: center;
+      border-radius: 2rem;
+      width: 7rem;
+      &::placeholder {
+        font-size: 1.2rem;
+      }
+      &:focus {
+        outline: 1px solid rgb(216, 210, 210);
+      }
+    }
+  }
+}
+main {
+  padding: 0 6rem;
+  .balance {
+    @include flex(flex, space-between, center);
+  }
+  .dashboard {
+    @include flex(flex, space-between, flex-start);
+    padding: 2rem 0;
+    .part1 {
+      background-color: white;
+      padding: 0 2rem;
+      overflow: scroll;
+      .movements {
+        .each-mov {
+          @include flex(flex, space-between, center);
+          margin-top: 1rem;
+          .deposit {
+            background-color: rgb(87, 193, 121);
+            border-radius: 1rem;
+            text-align: center;
+            padding: 0 9px;
+          }
+        }
+      }
+      .analysis {
+        @include flex(flex, space-between, center);
+        .summary {
+          @include flex(flex, space-between, center);
+        }
+      }
+    }
+    .part2 {
+      background-color: white;
+      padding: 4rem;
+    }
+  }
+}

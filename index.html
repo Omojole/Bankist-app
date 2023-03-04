@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/index.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <title>Bankist App</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <h1 class="login-statement">Log in to get started</h1>
+      </nav>
+      <img src="logo.png" alt="icon" class="alt" />
+      <form action="" method="get">
+        <input type="text" name="user" placeholder="user" />
+        <input type="text" name="pin" placeholder="PIN" />
+        <button type="submit"></button>
+      </form>
+    </header>
+    <main>
+      <section class="balance">
+        <div class="total-balance">
+          <h2 class="balance-word">Current balance</h2>
+          <p class="balance-date">As of 05/03/2037</p>
+        </div>
+        <h2 class="balance-amount">0000€</h2>
+      </section>
+      <section class="dashboard">
+        <div class="part1">
+          <div class="movements">
+            <div class="each-mov">
+              <div class="deposit">2 deposit</div>
+              <div >3 DAYS AGO</div>
+              <div >4 000€</div>
+            </div>
+            <div class="each-mov">
+              <div class="deposit">2 deposit</div>
+              <div>3 DAYS AGO</div>
+              <div>-378€</div>
+            </div>
+          </div>
+          <div class="analysis">
+            <div class="summary">
+              <div class="income">
+                IN <span class="color-green">0000€</span>
+              </div>
+              <div class="expenses">OUT <span class="color-red"></span></div>
+              <div class="interest">
+                INTEREST<span class="color-green">0000€</span>
+              </div>
+            </div>
+            <button>SORT</button>
+          </div>
+        </div>
+        <div class="part2">
+          <div>
+            <h3>Transfer money</h3>
+            <form action="">
+              <input type="text" name="transfer-name" id="transfer-name" />
+              <label for="transfer-name">Transfer to</label>
+              <input
+                type="number"
+                name="transfer-amount"
+                id="transfer-amount"
+              />
+              <label for="transfer-amount">Amount</label>
+              <button type="submit"></button>
+            </form>
+          </div>
+          <div>
+            <h3>Request Loan</h3>
+            <form action="">
+              <input type="number" name="loan-amount" id="loan-amount" />
+              <label for="loan-amount">Amount</label>
+              <button type="submit"></button>
+            </form>
+          </div>
+          <div>
+            <h3>Close Account</h3>
+            <form action="">
+              <input type="text" name="confirm-user" id="confirm-user" />
+              <label for="confirm-user">Confirm User</label>
+              <input type="number" name="confirm-pin" id="confirm-pin" />
+              <label for="Confirm-pin">Confirm Pin</label>
+              <button type="submit"></button>
+            </form>
+          </div>
+          <p>You will be logged out in <span class="logout-time">5:00</span></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
