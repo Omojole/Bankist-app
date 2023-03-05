@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(243, 243, 243);
+  background-color: $background-color;
 }
 header {
   @include flex(flex, space-between, center);
@@ -18,7 +18,7 @@ header {
         font-size: 1.2rem;
       }
       &:focus {
-        outline: 1px solid rgb(216, 210, 210);
+        outline: 1px solid $background-color;
       }
     }
   }
@@ -32,31 +32,97 @@ main {
     @include flex(flex, space-between, flex-start);
     padding: 2rem 0;
     .part1 {
-      background-color: white;
-      padding: 0 2rem;
-      overflow: scroll;
       .movements {
+        background-color: rgb(255, 255, 255);
+        overflow: scroll;
+        height: 70vh;
         .each-mov {
-          @include flex(flex, space-between, center);
+          // @include flex(flex, center, center);
+          display: flex;
           margin-top: 1rem;
+          padding: 1.5rem 2.5rem;
+          border-bottom: 2px solid $background-color;
+          #mov-date{
+            margin-right: 15rem;
+            margin-left: 1.5rem;
+          }
           .deposit {
-            background-color: rgb(87, 193, 121);
+            background-color: $green-background;
             border-radius: 1rem;
             text-align: center;
             padding: 0 9px;
+          }
+          .withdrawal{
+            background-color: $red-background;
+            border-radius: 1rem;
+            text-align: center;
+            padding: 0 9px;
+
           }
         }
       }
       .analysis {
         @include flex(flex, space-between, center);
         .summary {
+          width: 60%;
           @include flex(flex, space-between, center);
+          .color-green{
+color: $green-background;
+          }
+          .color-red{
+            color: $red-background;
+          }
+        }
+        button{
+          border: none;
         }
       }
     }
     .part2 {
-      background-color: white;
-      padding: 4rem;
+      height: 78vh;
+      @include flex(flex,space-between,flex-start);
+      flex-direction: column;
+      #box1{
+        background-color: $yellow-background;
+      }
+      #box2{
+        background-color: $green-background;
+        form{
+          justify-content: flex-start;
+          div{
+            width: 40%;
+          }
+        }
+      }
+      #box3{
+        background-color: $red-background;
+      }
+      .box{
+        width: 25rem;
+        border: none;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        form{
+          margin-top: 10px;
+          @include flex(flex,space-between,center);
+          div{
+            text-align: center;
+            input{
+              background-color: $background-color;
+              opacity: .4;
+              width: 8rem;
+              border: none;
+              border-radius: 4px;
+            }
+          }
+      }
+    }
+    div{
+      width: 100%;
+      p{
+        float: right;
+      }
+    }
     }
   }
 }

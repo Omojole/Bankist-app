@@ -21,14 +21,11 @@ header form input {
 header form input::-moz-placeholder {
   font-size: 1.2rem;
 }
-header form input:-ms-input-placeholder {
-  font-size: 1.2rem;
-}
 header form input::placeholder {
   font-size: 1.2rem;
 }
 header form input:focus {
-  outline: 1px solid rgb(216, 210, 210);
+  outline: 1px solid rgb(243, 243, 243);
 }
 
 main {
@@ -45,19 +42,29 @@ main .dashboard {
   align-items: flex-start;
   padding: 2rem 0;
 }
-main .dashboard .part1 {
-  background-color: white;
-  padding: 0 2rem;
+main .dashboard .part1 .movements {
+  background-color: rgb(255, 255, 255);
   overflow: scroll;
+  height: 70vh;
 }
 main .dashboard .part1 .movements .each-mov {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 1rem;
+  padding: 1.5rem 2.5rem;
+  border-bottom: 2px solid rgb(243, 243, 243);
+}
+main .dashboard .part1 .movements .each-mov #mov-date {
+  margin-right: 15rem;
+  margin-left: 1.5rem;
 }
 main .dashboard .part1 .movements .each-mov .deposit {
   background-color: rgb(87, 193, 121);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0 9px;
+}
+main .dashboard .part1 .movements .each-mov .withdrawal {
+  background-color: rgb(241, 64, 93);
   border-radius: 1rem;
   text-align: center;
   padding: 0 9px;
@@ -68,13 +75,69 @@ main .dashboard .part1 .analysis {
   align-items: center;
 }
 main .dashboard .part1 .analysis .summary {
+  width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+main .dashboard .part1 .analysis .summary .color-green {
+  color: rgb(87, 193, 121);
+}
+main .dashboard .part1 .analysis .summary .color-red {
+  color: rgb(241, 64, 93);
+}
+main .dashboard .part1 .analysis button {
+  border: none;
+}
 main .dashboard .part2 {
-  background-color: white;
-  padding: 4rem;
+  height: 78vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+main .dashboard .part2 #box1 {
+  background-color: rgb(255, 185, 3);
+}
+main .dashboard .part2 #box2 {
+  background-color: rgb(87, 193, 121);
+}
+main .dashboard .part2 #box2 form {
+  justify-content: flex-start;
+}
+main .dashboard .part2 #box2 form div {
+  width: 40%;
+}
+main .dashboard .part2 #box3 {
+  background-color: rgb(241, 64, 93);
+}
+main .dashboard .part2 .box {
+  width: 25rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+main .dashboard .part2 .box form {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .dashboard .part2 .box form div {
+  text-align: center;
+}
+main .dashboard .part2 .box form div input {
+  background-color: rgb(243, 243, 243);
+  opacity: 0.4;
+  width: 8rem;
+  border: none;
+  border-radius: 4px;
+}
+main .dashboard .part2 div {
+  width: 100%;
+}
+main .dashboard .part2 div p {
+  float: right;
 }
 
 /* Box sizing rules */
@@ -143,12 +206,10 @@ select {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
