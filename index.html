@@ -11,22 +11,22 @@
   <body>
     <header>
       <nav class="nav-bar">
-        <h1 class="login-statement">Log in to get started</h1>
+        <h1 class="welcome">Log in to get started</h1>
       </nav>
       <img src="logo.png" alt="icon" class="alt" />
       <form action="" method="get">
-        <input type="text" name="user" placeholder="user" />
-        <input type="text" name="pin" placeholder="PIN" />
-        <button type="submit"></button>
+        <input type="text" name="user" placeholder="user" class="login__input--user" />
+        <input type="text" name="pin" placeholder="PIN" class="login__input--pin" />
+        <button type="submit" class="login__btn"></button>
       </form>
     </header>
-    <main>
+    <main class="app">
       <section class="balance">
         <div class="total-balance">
           <h2 class="balance-word">Current balance</h2>
-          <p class="balance-date">As of 05/03/2037</p>
+          <p class="date">As of 05/03/2037</p>
         </div>
-        <h2 class="balance-amount">0000€</h2>
+        <h2 class="balance__value">0000€</h2>
       </section>
       <section class="dashboard">
         <div class="part1">
@@ -45,14 +45,14 @@
           <div class="analysis">
             <div class="summary">
               <div class="income">
-                IN <span class="color-green">0000€</span>
+                IN <span class="color-green summary__value--in">0000€</span>
               </div>
-              <div class="expenses">OUT <span class="color-red">0000€</span></div>
+              <div class="expenses">OUT <span class="color-red summary__value--out">0000€</span></div>
               <div class="interest">
-                INTEREST<span class="color-green">0000€</span>
+                INTEREST<span class="color-green summary__value--interest">0000€</span>
               </div>
             </div>
-            <button>SORT</button>
+            <button type="button" class="btn--sort">SORT</button>
           </div>
         </div>
         <div class="part2">
@@ -60,7 +60,7 @@
             <h3>Transfer money</h3>
             <form action="">
               <div>
-                <input type="text" name="transfer-name" id="transfer-name" />
+                <input type="text" name="transfer-name" class="form__input--to" />
                 <br>
                 <label for="transfer-name">Transfer to</label>
               </div>
@@ -68,12 +68,12 @@
                 <input
                   type="number"
                   name="transfer-amount"
-                  id="transfer-amount"
+                 class="form__input--amount"
                 />
                 <br>
                 <label for="transfer-amount">Amount</label>
               </div>
-              <button type="submit"></button>
+              <button type="submit" class="form__btn--transfer"></button>
             </form>
           </div>
           <div class="box" id="box2">
@@ -81,34 +81,35 @@
             <h3>Request Loan</h3>
             <form action="">
               <div>
-               <input type="number" name="loan-amount" id="loan-amount" />
+               <input type="number" name="loan-amount" class="form__input--loan-amount" />
 <br>
                 <label for="loan-amount">Amount</label>
               </div>
-              <button type="submit"></button>
+              <button type="submit" class="form__btn--loan"></button>
             </form>
           </div>
           <div class="box" id="box3">
             <h3>Close Account</h3>
             <form action="">
               <div>
-                <input type="text" name="confirm-user" id="confirm-user" />
+                <input type="text" name="confirm-user"class="form__input--user" />
                 <br>
                 <label for="confirm-user">Confirm User</label>
               </div>
               <div>
-                <input type="number" name="confirm-pin" id="confirm-pin" />
+                <input type="number" name="confirm-pin" class="form__input--pin" />
                 <br>
                 <label for="Confirm-pin">Confirm Pin</label>
               </div>
-              <button type="submit"></button>
+              <button type="submit" class="form__btn--close"></button>
             </form>
           </div>
           <div>
-            <p>You will be logged out in <span class="logout-time">5:00</span></p>
+            <p>You will be logged out in <span class="timer">5:00</span></p>
           </div>
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -28,115 +28,116 @@ header form input:focus {
   outline: 1px solid rgb(243, 243, 243);
 }
 
-main {
+.app {
+  transition: all 1s;
   padding: 0 6rem;
 }
-main .balance {
+.app .balance {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main .dashboard {
+.app .dashboard {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 2rem 0;
 }
-main .dashboard .part1 .movements {
+.app .dashboard .part1 .movements {
   background-color: rgb(255, 255, 255);
   overflow: scroll;
   height: 70vh;
 }
-main .dashboard .part1 .movements .each-mov {
+.app .dashboard .part1 .movements .each-mov {
   display: flex;
   margin-top: 1rem;
   padding: 1.5rem 2.5rem;
   border-bottom: 2px solid rgb(243, 243, 243);
 }
-main .dashboard .part1 .movements .each-mov #mov-date {
+.app .dashboard .part1 .movements .each-mov #mov-date {
   margin-right: 15rem;
   margin-left: 1.5rem;
 }
-main .dashboard .part1 .movements .each-mov .deposit {
+.app .dashboard .part1 .movements .each-mov .deposit {
   background-color: rgb(87, 193, 121);
   border-radius: 1rem;
   text-align: center;
   padding: 0 9px;
 }
-main .dashboard .part1 .movements .each-mov .withdrawal {
+.app .dashboard .part1 .movements .each-mov .withdrawal {
   background-color: rgb(241, 64, 93);
   border-radius: 1rem;
   text-align: center;
   padding: 0 9px;
 }
-main .dashboard .part1 .analysis {
+.app .dashboard .part1 .analysis {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main .dashboard .part1 .analysis .summary {
+.app .dashboard .part1 .analysis .summary {
   width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main .dashboard .part1 .analysis .summary .color-green {
+.app .dashboard .part1 .analysis .summary .color-green {
   color: rgb(87, 193, 121);
 }
-main .dashboard .part1 .analysis .summary .color-red {
+.app .dashboard .part1 .analysis .summary .color-red {
   color: rgb(241, 64, 93);
 }
-main .dashboard .part1 .analysis button {
+.app .dashboard .part1 .analysis button {
   border: none;
 }
-main .dashboard .part2 {
+.app .dashboard .part2 {
   height: 78vh;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
 }
-main .dashboard .part2 #box1 {
+.app .dashboard .part2 #box1 {
   background-color: rgb(255, 185, 3);
 }
-main .dashboard .part2 #box2 {
+.app .dashboard .part2 #box2 {
   background-color: rgb(87, 193, 121);
 }
-main .dashboard .part2 #box2 form {
+.app .dashboard .part2 #box2 form {
   justify-content: flex-start;
 }
-main .dashboard .part2 #box2 form div {
+.app .dashboard .part2 #box2 form div {
   width: 40%;
 }
-main .dashboard .part2 #box3 {
+.app .dashboard .part2 #box3 {
   background-color: rgb(241, 64, 93);
 }
-main .dashboard .part2 .box {
+.app .dashboard .part2 .box {
   width: 25rem;
   border: none;
   border-radius: 1rem;
   padding: 1.5rem;
 }
-main .dashboard .part2 .box form {
+.app .dashboard .part2 .box form {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main .dashboard .part2 .box form div {
+.app .dashboard .part2 .box form div {
   text-align: center;
 }
-main .dashboard .part2 .box form div input {
+.app .dashboard .part2 .box form div input {
   background-color: rgb(243, 243, 243);
   opacity: 0.4;
   width: 8rem;
   border: none;
   border-radius: 4px;
 }
-main .dashboard .part2 div {
+.app .dashboard .part2 div {
   width: 100%;
 }
-main .dashboard .part2 div p {
+.app .dashboard .part2 div p {
   float: right;
 }
 
