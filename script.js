@@ -87,35 +87,37 @@ const displayMovements = function (acc,sort=false) {
   containerMovements.innerHTML = "";
 
   const movs = sort? acc.movements.slice().sort((a,b)=>a-b):acc.movements;
+  
  movs.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
     const html = `
     <div class="each-mov">
     <span class="${type}">${1 + i} ${type}</span>
     <span  id="mov-date">3 DAYS AGO</span>
-    <span >${mov}</span>
+    <span >${Math.round(mov).toFixed(2)}${'£'}</span>
   </div>
 `;
     containerMovements.insertAdjacentHTML("afterbegin",html);
   });
 };
 //calculate current balance
-const currentBalance=function(acc){
-acc.balance=acc.movements.reduce((acc,mov)=>acc+mov,0);
+const currentBalance=function(acc){ 
+  acc.balance=Math.round(acc.movements.reduce((acc,mov)=>acc+mov,0)).toFixed(2);
 labelBalance.textContent=acc.balance;
 
 //calculate deposits
- const deposit=currentAccount.movements.filter(acc=>acc>0).reduce((acc,mov)=>acc+mov,0);
+ const deposit=Math.round(currentAccount.movements.filter(acc=>acc>0).reduce((acc,mov)=>acc+mov,0)).toFixed(2);
  labelSumIn.textContent=deposit;
 
  //calculate withdrawals
-  const withdrawal=currentAccount.movements.filter(acc=>acc<0).reduce((acc,mov)=>acc+mov,0);
+  const withdrawal=Math.round(currentAccount.movements.filter(acc=>acc<0).reduce((acc,mov)=>acc+mov,0)).toFixed(2);
  labelSumOut.textContent=withdrawal;
 
 
  //interest
  const interest=currentAccount.movements.filter(acc=>acc>0).map((deposits)=>(deposit*currentAccount.interestRate)/100).filter(int=>int>=1).reduce((acc,mov)=>(acc+mov),0);
- labelSumInterest.textContent=interest;
+ const roundedInterest=Math.round(interest).toFixed(2);
+ labelSumInterest.textContent=roundedInterest;
 }
 
 //activating login button
@@ -184,6 +186,8 @@ btnClose.addEventListener('click',function(e){
   }
   inputCloseUsername.value=inputClosePin.value='';
 })
+
+//sorting
 let sorted=false;
 btnSort.addEventListener('click',function(e){
 e.preventDefault();
