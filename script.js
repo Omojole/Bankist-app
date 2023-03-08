@@ -82,11 +82,11 @@ const createUsernames = function (accs) {
 createUsernames(accounts);
 
 //display movements
-const displayMovements = function (acc) {
+const displayMovements = function (acc,sort=false) {
   //clear movements
   containerMovements.innerHTML = "";
 
-  const movs = acc.movements;
+  const movs = sort? acc.movements.slice().sort((a,b)=>a-b):acc.movements;
  movs.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
     const html = `
@@ -184,6 +184,10 @@ btnClose.addEventListener('click',function(e){
   }
   inputCloseUsername.value=inputClosePin.value='';
 })
-
-
+let sorted=false;
+btnSort.addEventListener('click',function(e){
+e.preventDefault();
+displayMovements(currentAccount,!sorted);
+sorted=!sorted;
+});
 //keydown event
