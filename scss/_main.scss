@@ -100,6 +100,7 @@ color: $green-background;
         background-color: $red-background;
       }
       .box{
+
         width: 25rem;
         border: none;
         border-radius: 1rem;
@@ -108,6 +109,7 @@ color: $green-background;
           margin-top: 10px;
           @include flex(flex,space-between,center);
           div{
+
             text-align: center;
             input{
               background-color: $background-color;
